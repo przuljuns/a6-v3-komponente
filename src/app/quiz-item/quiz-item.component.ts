@@ -26,15 +26,6 @@ export class QuizItemComponent implements OnInit {
       
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(`ngOnChanges ${this.quizItemData}`);
-    for (let key in changes) {
-      console.log(`${key} promenjen.
-                   Trenutno: ${changes[key].currentValue}
-                   Prethodno: ${changes[key].previousValue}`);
-    }
-  }  
-
   klik() {
     console.log("klik item");
   }

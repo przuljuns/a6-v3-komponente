@@ -15,7 +15,7 @@ export class QuizListComponent implements OnInit {
 
   constructor() { 
     this.quizItems = [
-      {question: 'Glavni gradi Italije?', answer: 'Rim', hideAnswer: true},
+      {question: 'Glavni grad Italije?', answer: 'Rim', hideAnswer: true},
       {question: 'Najviši vrh Evrope?', answer: 'Elbrus', hideAnswer: true},
       {question: 'Reka ispod savskog mosta?', answer: 'Sava', hideAnswer: true}
     ];
