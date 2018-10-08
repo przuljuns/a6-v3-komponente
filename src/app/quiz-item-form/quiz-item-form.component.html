@@ -1,10 +1,7 @@
 <mat-card>
-  <mat-card-title>Nova zagonetka</mat-card-title>
-  <mat-card-content>
-    <mat-form-field><input matInput placeholder="Upisite pitanje" #question></mat-form-field> 
-  </mat-card-content>
-  <mat-card-content>
-    <mat-form-field><input matInput placeholder="Upisite resenje" #solution></mat-form-field>
-  </mat-card-content>
-  <button mat-raised-button color="primary" (click)="createPuzzle(question.value, solution.value)">Dodaj</button>
+  <mat-form-field><input matInput placeholder="pitanje" #p></mat-form-field>
+  <br>
+  <mat-form-field><input matInput placeholder="odgovor" #o></mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="createQuizItem(p.value, o.value)">Dodaj</button>
 </mat-card>

@@ -21,4 +21,7 @@ export class QuizListComponent implements OnInit {
   ngOnInit() {
   }
 
+  addQuizItem(quizItem) {
+    this.quizItems.unshift(quizItem);
+  }
 }
