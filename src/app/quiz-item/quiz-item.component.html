@@ -1,0 +1,3 @@
+<h3>{{ quizItemData.question }}</h3>
+<p [hidden]="quizItemData.hideAnswer">{{ quizItemData.answer }}</p>
+<button (click)="quizItemData.hideAnswer=!quizItemData.hideAnswer">Promeni prikaz</button>
