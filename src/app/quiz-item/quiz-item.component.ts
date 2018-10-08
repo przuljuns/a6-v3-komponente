@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, SimpleChanges } from '@angular/core';
 import { QuizItem } from '../model/quiz-item.model';
 
 @Component({
@@ -9,10 +9,34 @@ import { QuizItem } from '../model/quiz-item.model';
 export class QuizItemComponent implements OnInit {
 
   @Input() quizItemData: QuizItem;
+  buttonTitle = 'Prikaži';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleHideAnswer() {
+    this.quizItemData.hideAnswer = !this.quizItemData.hideAnswer;
+    if (this.quizItemData.hideAnswer) {
+      this.buttonTitle = 'Prikaži';
+    } else {
+      this.buttonTitle = 'Sakrij';
+    }
+      
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(`ngOnChanges ${this.quizItemData}`);
+    for (let key in changes) {
+      console.log(`${key} promenjen.
+                   Trenutno: ${changes[key].currentValue}
+                   Prethodno: ${changes[key].previousValue}`);
+    }
+  }  
+
+  klik() {
+    console.log("klik item");
   }
 
 }
