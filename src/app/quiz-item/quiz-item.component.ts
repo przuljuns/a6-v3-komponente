@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { QuizItem } from '../model/quiz-item.model';
 
 @Component({
@@ -29,5 +29,4 @@ export class QuizItemComponent implements OnInit {
   klik() {
     console.log("klik item");
   }
-
 }
